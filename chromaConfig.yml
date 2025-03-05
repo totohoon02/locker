@@ -6,4 +6,4 @@ spring:
           host: http://localhost
           port: 8000
         initialize-schema: true # auto gen collection
-          collection-name: springAi
+        collection-name: springAi
