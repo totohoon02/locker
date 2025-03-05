@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  chromadb:
+    image: ghcr.io/chroma-core/chroma:0.5.20
+    container_name: chromadb
+    ports:
+      - "8000:8000"
+    volumes:
+      - C:/Develop/chromdDb:/chroma/chroma
+    environment:
+      IS_PERSISTENT: "TRUE"
+      ANONYMIZED_TELEMETRY: "TRUE"
+    restart: always
