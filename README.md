@@ -24,6 +24,7 @@ lck(){
         echo "         |--elastic8"
         echo "         |--nginx"
         echo "         |--ollama"
+        echo "         |--airflow"
         echo ""
         echo "##### Usage #####"
         echo "lck chromaConfig.yml"
