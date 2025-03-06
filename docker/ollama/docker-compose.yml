@@ -10,7 +10,7 @@ services:
     ports:
       - "11434:11434" # Default port for Ollama
     volumes:
-      - ./ollama/entrypoint.sh:/entrypoint.sh # pull model script
+      - ./entrypoint.sh:/entrypoint.sh # pull model script
       - ./ollama/models:/root/.ollama/models # model cache
     entrypoint: ["/bin/sh", "./entrypoint.sh"]
     restart: always
