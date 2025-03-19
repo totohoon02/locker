@@ -26,6 +26,7 @@ lck(){
         echo "         |--ollama"
         echo "         |--airflow"
         echo "         |--mysql"
+        echo "         |--mongodb"
         echo ""
         echo "##### Usage #####"
         echo "lck chromaConfig.yml"
