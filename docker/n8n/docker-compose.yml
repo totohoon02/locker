@@ -1,0 +1,28 @@
+version: '3'
+services:
+  ollama:
+    image: ollama/ollama
+    container_name: ollama-n8n
+    ports:
+      - "11434:11434" # network 접근 11434
+    volumes:
+      - ./init.sh:/init.sh
+      # model cache "docker cp ollama-n8n:root/.ollama/models ."
+      - ./models:/root/.ollama/models
+    entrypoint: [ "/bin/sh", "./init.sh" ]
+    networks:
+      - n8n-network
+
+  n8n:
+    image: n8nio/n8n
+    container_name: n8n
+    ports:
+      - "5678:5678"
+    volumes:
+      - ~/.n8n:/home/node/.n8n
+    networks:
+      - n8n-network
+
+networks:
+  n8n-network:
+    driver: bridge
