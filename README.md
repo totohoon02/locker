@@ -29,6 +29,7 @@ lck(){
         echo "         |--mongodb"
         echo "         |--n8n"
         echo "         |--kafka"
+        echo "         |--postgre"
         echo ""
         echo "##### Usage #####"
         echo "lck chromaConfig.yml"
