@@ -1,16 +1,16 @@
 # locker
-config document locker
+Config document locker
 
-### useage
+### Useage
 ```
 curl https://raw.githubusercontent.com/totohoon02/locker/refs/heads/main/ruff.toml > ruff.toml
 ```
-- reference: https://github.com/astral-sh/ruff
 
 ### easy-start-up
 
 ```bash
 lck(){
+    # help
     if [[ "$1" == "--help" || "$1" == "-h" ]]; then
         echo "locker/"
         echo "      |--chromaConfig.yml"
@@ -30,31 +30,46 @@ lck(){
         echo "         |--n8n"
         echo "         |--kafka"
         echo "         |--postgre"
+        echo "      |--java"
+        echo "         |--SwaggerConfig.java"
         echo ""
         echo "##### Usage #####"
-        echo "lck chromaConfig.yml"
-        echo "lck -d chromadb"
+        echo "lck chroma"       // chromaConfig.yml
+        echo "lck -d chromadb"  // chroma docker-compose.yml
+        echo "lck -j swagger"  // SwaggerConfig.java
         echo "##### Usage #####"
-        return 1
-    fi
-    
-    if [ -z "$1" ]; then
-        echo "Usage: lck <filename | docker> <docker:filename>"
         return 1
     fi
 
+    # No input    
+    if [ -z "$1" ]; then
+    echo "Usage: lck <filename | --docker/-d> [docker:filename]"
+    return 1
+    fi
+
+    # get file
+    local baseUrl="https://raw.githubusercontent.com/totohoon02/locker/refs/heads/main"
+    
     if [[ "$1" == "--docker" || "$1" == "-d" ]]; then
+
         if [ -z "$2" ]; then
             echo "Not specified Docker"
             return 1
         else
             local dir="$2"
-            echo "$dir"
             mkdir "$dir"
-            curl https://github.com/totohoon02/locker/blob/main/docker/$dir/docker-compose.yml >> ./"$dir"/docker-compose.yml
+            curl -sSL "$baseUrl/docker/$dir/docker-compose.yml" -o "./$dir/docker-compose.yml"
         fi
+
+    elif [[ "$1" == "--java" || "$1" == "-j" ]]; then
+        local dir="$2"
+        dir="$(tr '[:lower:]' '[:upper:]' <<< "${dir:0:1}")${dir:1}"
+        curl -sSL "$baseUrl/java/${dir}Config.java" -o "${dir}Config.java"
+
     else
-        curl https://raw.githubusercontent.com/totohoon02/locker/refs/heads/main/"$1" >> "$1" 
+        local dir="$1"
+        dir=$(echo "$dir" | tr '[:upper:]' '[:lower:]')
+        curl -sSL "$baseUrl/${dir}Config.yml" -o "${dir}Config.yml"
     fi
 }
 
