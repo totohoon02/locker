@@ -1,0 +1,27 @@
+locker/
+      |--chromaConfig.yml
+      |--elasticConfig.yml
+      |--ollamaConfig.yml
+      |--sqliteConfig.yml
+      |--swaggerConfig.yml
+      |--ruff.toml
+      |--docker
+         |--airflow
+         |--chromadb
+         |--elastic8
+         |--kafka
+         |--mongodb
+         |--mysql
+         |--nginx
+         |--n8n
+         |--ollama
+         |--postgre
+         |--redis
+      |--java
+         |--SwaggerConfig.java
+
+##### Usage #####
+lck chroma        // chromaConfig.yml
+lck -d chromadb   // chroma docker-compose.yml
+lck -j swagger    // SwaggerConfig.java
+##### Usage #####
