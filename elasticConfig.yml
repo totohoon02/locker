@@ -5,3 +5,9 @@ spring:
     password: changeme
     connection-timeout: 30s
     socket-timeout: 30s
+
+# implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
+# <dependency>
+#   <groupId>org.springframework.boot</groupId>
+#   <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+# </dependency>
