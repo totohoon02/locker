@@ -2,6 +2,7 @@ locker/
       |--chromaConfig.yml
       |--elasticConfig.yml
       |--ollamaConfig.yml
+      |--mysqlConfig.yml
       |--sqliteConfig.yml
       |--swaggerConfig.yml
       |--ruff.toml
