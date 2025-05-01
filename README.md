@@ -57,3 +57,6 @@ lck(){
 lck ruff.toml
 lck -d chromadb
 ```
+
+### Chrome Extension version
+- [link](https://chromewebstore.google.com/detail/locker-config-document-re/oeipihefcncbcljghboadfhhogplmdip?authuser=0&hl=ko)
