@@ -9,7 +9,13 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: false
-
+  # Chat Memory Config
+  # ai:
+  #   chat:
+  #     memory:
+  #       repository:
+  #         jdbc:
+  #           initialize-schema: never
 
 # implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 # implementation 'com.mysql:mysql-connector-j'
@@ -18,3 +24,5 @@ spring:
 #   <artifactId>mysql-connector-j</artifactId>
 #   <scope>runtime</scope> </dependency>
 #  </dependencies>
+
+# implementation 'org.springframework.ai:spring-ai-starter-model-chat-memory-repository-jdbc'
