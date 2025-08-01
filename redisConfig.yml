@@ -1,0 +1,13 @@
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password:
+
+# implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+# implementation 'org.springframework.boot:spring-boot-starter-cache'
+# implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+# *Applicaiton.java에 @EnableCaching 추가
+# https://digitalbourgeois.tistory.com/267
