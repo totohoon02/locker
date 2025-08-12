@@ -7,3 +7,7 @@ spring:
           port: 8000
         initialize-schema: true # auto gen collection
         collection-name: springAi
+
+#	implementation 'org.springframework.ai:spring-ai-advisors-vector-store'
+#	implementation 'org.springframework.ai:spring-ai-starter-vector-store-chroma'
+
