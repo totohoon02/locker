@@ -11,6 +11,3 @@ services:
       IS_PERSISTENT: "TRUE"
       ANONYMIZED_TELEMETRY: "TRUE"
     restart: always
-
-#	implementation 'org.springframework.ai:spring-ai-advisors-vector-store'
-#	implementation 'org.springframework.ai:spring-ai-starter-vector-store-chroma'
