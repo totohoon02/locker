@@ -1,8 +1,10 @@
 locker/
       |--chromaConfig.yml
       |--elasticConfig.yml
-      |--ollamaConfig.yml
       |--mysqlConfig.yml
+      |--ollamaConfig.yml
+      |--openaiConfig.yml
+      |--redisConfig.yml
       |--sqliteConfig.yml
       |--swaggerConfig.yml
       |--ruff.toml
@@ -11,15 +13,17 @@ locker/
          |--chromadb
          |--elastic8
          |--kafka
+         |--mlflow
          |--mongodb
          |--mysql
-         |--nginx
          |--n8n
+         |--nginx
          |--ollama
          |--postgre
          |--redis
       |--java
          |--SwaggerConfig.java
+         |--RedisConfig.java
 
 ##### Usage #####
 lck -y chroma        // chromaConfig.yml
