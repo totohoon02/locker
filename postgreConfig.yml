@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mydatabase
+    username: myuser
+    password: mypassword
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update   # create / create-drop / validate / none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        show_sql: true
+    open-in-view: false
+
+  sql:
+    init:
+      mode: never       # 스키마나 데이터 초기화 시점 설정 (never / always / embedded)
+
+#  implementation 'org.postgresql:postgresql:42.7.3'
