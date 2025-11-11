@@ -4,6 +4,7 @@ locker/
       |--mysqlConfig.yml
       |--ollamaConfig.yml
       |--openaiConfig.yml
+      |--postgreConfig.yml
       |--redisConfig.yml
       |--sqliteConfig.yml
       |--swaggerConfig.yml
