@@ -1,0 +1,17 @@
+services:
+  rabbitmq:
+    image: rabbitmq:4-management # 15672 관리 UI 포함 버전
+    hostname: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: app
+      RABBITMQ_DEFAULT_PASS: app
+      RABBITMQ_DEFAULT_VHOST: /
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+# implementation 'org.springframework.boot:spring-boot-starter-amqp'
