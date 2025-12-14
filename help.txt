@@ -5,6 +5,7 @@ locker/
       |--ollamaConfig.yml
       |--openaiConfig.yml
       |--postgreConfig.yml
+      |--rabbitmqConfig.yml
       |--redisConfig.yml
       |--sqliteConfig.yml
       |--swaggerConfig.yml
@@ -22,9 +23,11 @@ locker/
          |--ollama
          |--postgre
          |--redis
+         |--rabbitmq
       |--java
          |--SwaggerConfig.java
          |--RedisConfig.java
+         |--RabbitmqConfig.java
 
 ##### Usage #####
 lck -y chroma        // chromaConfig.yml
