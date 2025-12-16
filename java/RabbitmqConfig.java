@@ -10,7 +10,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableScheduling
 @Configuration
-public class RabbitMqConfig {
+public class RabbitmqConfig {
 
     public static final String QUEUE_NAME = "mail-queue";
     public static final String EXCHANGE_NAME = "mail-exchange";
