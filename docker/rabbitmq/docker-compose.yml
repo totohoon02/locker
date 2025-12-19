@@ -1,6 +1,7 @@
 services:
   rabbitmq:
     image: rabbitmq:4-management # 15672 관리 UI 포함 버전
+    container_name: rabbitmq
     hostname: rabbitmq
     ports:
       - "5672:5672"
