@@ -5,6 +5,19 @@ spring:
     username: app
     password: app
     virtual-host: /
+    listener:
+      simple:
+        acknowledge-mode: auto
+        default-requeue-rejected: true # Dead 발생 시 리큐잉, 기본값: true
+        retry:
+          enabled: false
+          max-retries: 2
+        prefetch: 5
+#          initial-interval: 1000ms
+#          max-interval: 3000ms
+#          multiplier: 2.0
+#    publisher-confirm-type: correlated # simple은 동기방식, 거의 안씀
+#    publisher-returns: true # NACK 시 추가 정보
 
 # implementation 'org.springframework.boot:spring-boot-starter-amqp'
 # implementation 'org.springframework.boot:spring-boot-starter-jackson'
