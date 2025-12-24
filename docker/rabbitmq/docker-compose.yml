@@ -15,4 +15,8 @@ services:
       interval: 10s
       timeout: 5s
       retries: 10
+    restart: always
+    volumes:
+      - ./rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+    
 # implementation 'org.springframework.boot:spring-boot-starter-amqp'
