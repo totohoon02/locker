@@ -12,6 +12,7 @@ locker/
       |--ruff.toml
       |--docker
          |--airflow
+         |--app
          |--chromadb
          |--elastic8
          |--kafka
