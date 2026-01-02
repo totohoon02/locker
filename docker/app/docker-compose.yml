@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    image: kubs
+    container_name: mykub
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
